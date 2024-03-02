@@ -2,6 +2,7 @@ package com.example.demo.controller
 
 import com.example.demo.repository.UserRepository
 import com.example.demo.util.LoggerDelegate
+import kotlinx.coroutines.delay
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -15,4 +16,9 @@ class Controller(
 
     @GetMapping("/users")
     fun getUsers() = userRepository.findAll()
+
+    @GetMapping("/delay")
+    suspend fun delay() {
+        delay(1000)
+    }
 }
