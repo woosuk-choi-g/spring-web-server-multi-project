@@ -7,14 +7,6 @@
 
 # 시작
 스프링 프로젝트 중 하나를 실행합니다.
-## windows 에서
-```bash
-.\gradlew tomcat:bootRun
-.\gradlew netty-coroutine:bootRun
-.\gradlew netty-reactive:bootRun
-```
-
-## linux 에서
 ```bash
 ./gradlew tomcat:bootRun
 ./gradlew netty-coroutine:bootRun
@@ -23,5 +15,5 @@
 
 스프링이 완전히 구동되면 k6 를 실행합니다
 ```bash
-docker run --rm -i k6 run --vus 1000 - <script.js
+docker run --rm -i k6 run --vus 1000 - <./k6/script.js
 ```
